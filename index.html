@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr Yongjin Ahn — Assistant Professor of Public Administration</title>
+<meta name="description" content="Yongjin Ahn is an assistant professor of public administration at Sungkyunkwan University, studying bureaucratic politics and behavioral public administration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1e23; --ink-soft:#3b4048; --muted:#5f636a;
+  --paper:#f6f2ea; --paper-raised:#fcfaf5; --paper-deep:#ece5d8; --paper-ink:#1a1d22;
+  --rule:#ddd6c8; --rule-strong:#c5bca8; --rule-ink:rgba(27,30,35,.14);
+  --civic:#8c2b27; --civic-deep:#6e211d; --civic-tint:#f0e3df;
+  --green:#234b38; --green-deep:#173529; --green-tint:#e2ebe3;
+  --gold:#9a7a2e;
+  --font-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --font-sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --step--1:clamp(.83rem,.81rem + .1vw,.89rem);
+  --step-0:clamp(1rem,.96rem + .18vw,1.12rem);
+  --step-1:clamp(1.2rem,1.13rem + .34vw,1.45rem);
+  --step-2:clamp(1.44rem,1.32rem + .6vw,1.9rem);
+  --step-3:clamp(1.73rem,1.52rem + 1.04vw,2.55rem);
+  --step-4:clamp(2.07rem,1.72rem + 1.74vw,3.4rem);
+  --step-5:clamp(2.49rem,1.93rem + 2.78vw,4.6rem);
+  --measure:68ch; --container:72rem; --container-narrow:50rem;
+  --gutter:clamp(1.25rem,.9rem + 1.6vw,2.75rem);
+  --radius:3px;
+  --shadow-sm:0 1px 2px rgba(27,30,35,.05);
+  --shadow:0 14px 38px -22px rgba(27,30,35,.4);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--font-serif);font-size:var(--step-0);line-height:1.65;
+  color:var(--ink);background:var(--paper);
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--civic);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--civic-deep)}
+img{max-width:100%}
+.container{max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
+.mono{font-family:var(--font-mono);letter-spacing:.14em;text-transform:uppercase;font-size:.72rem;font-weight:500}
+
+/* ── Masthead ─────────────────────────────── */
+.masthead{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule-strong);
+}
+.masthead-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:4.25rem;gap:1rem;
+}
+.brand{display:flex;flex-direction:column;gap:.15rem;text-decoration:none;color:var(--ink)}
+.brand .file{color:var(--muted)}
+.brand .field{color:var(--civic)}
+.masthead nav{display:flex;gap:1.6rem;flex-wrap:wrap}
+.masthead nav a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent;padding-bottom:2px}
+.masthead nav a:hover{color:var(--civic);border-bottom-color:var(--civic)}
+@media(max-width:640px){.masthead nav{display:none}}
+
+/* ── Hero ─────────────────────────────────── */
+.hero{border-bottom:1px solid var(--rule-strong)}
+.hero-inner{
+  padding-block:clamp(3rem,6vw,5.5rem) clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:minmax(0,1.55fr) minmax(15rem,1fr);
+  gap:clamp(2rem,5vw,4.5rem);align-items:center;
+}
+.hero-portrait{justify-self:end;max-width:22rem;width:100%}
+.hero-portrait img{
+  display:block;width:100%;height:auto;border-radius:var(--radius);
+  border:1px solid var(--rule-strong);box-shadow:var(--shadow);
+  background:var(--paper-deep);
+}
+.hero-portrait figcaption{
+  margin-top:.8rem;color:var(--muted);text-align:right;
+}
+@media(max-width:860px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-portrait{justify-self:start;max-width:17rem;order:-1}
+  .hero-portrait figcaption{text-align:left}
+}
+.kicker{color:var(--civic);margin-bottom:1.4rem;display:flex;align-items:center;gap:.9rem}
+.kicker::after{content:"";flex:0 0 4rem;height:1px;background:var(--rule-strong)}
+.hero h1{
+  font-size:var(--step-5);font-weight:540;line-height:1.04;letter-spacing:-.015em;
+  margin-bottom:.6rem;
+}
+.hero h1 .kr{font-weight:340;color:var(--muted);font-size:.42em;letter-spacing:.04em;vertical-align:.5em;margin-left:.4rem}
+.degrees{color:var(--muted);font-size:var(--step-0);margin-bottom:1.6rem}
+.degrees span{margin-inline:.25rem}
+.role-line{font-size:var(--step-2);font-weight:500;line-height:1.25;margin-bottom:.4rem}
+.inst-line{color:var(--ink-soft);font-style:italic;margin-bottom:1.8rem}
+.lede{max-width:var(--measure);font-size:var(--step-1);line-height:1.55;color:var(--ink-soft);margin-bottom:2.2rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.btn{
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  text-decoration:none;padding:.85rem 1.4rem;border-radius:var(--radius);
+  display:inline-flex;align-items:center;gap:.6rem;border:1px solid var(--ink);
+  transition:background .15s,color .15s;
+}
+.btn-primary{background:var(--ink);color:var(--paper-raised)}
+.btn-primary:hover{background:var(--civic);border-color:var(--civic);color:var(--paper-raised)}
+.btn-ghost{color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper-raised)}
+
+/* meta strip */
+.meta-strip{border-top:1px solid var(--rule);background:var(--paper-raised)}
+.meta-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr));
+  gap:0;padding-block:1.4rem;
+}
+.meta-cell{padding:.4rem 1.2rem;border-left:1px solid var(--rule)}
+.meta-cell:first-child{border-left:none;padding-left:0}
+.meta-cell .k{color:var(--muted);display:block;margin-bottom:.3rem}
+.meta-cell .v{font-size:.95rem;line-height:1.4}
+.meta-cell .v a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.meta-cell .v a:hover{color:var(--civic);border-bottom-color:var(--civic)}
+@media(max-width:800px){.meta-cell{border-left:none;padding-left:0}}
+
+/* stats */
+.stats{border-top:1px solid var(--rule)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:var(--gutter);padding-block:2.2rem}
+.stat .n{font-size:var(--step-4);font-weight:480;line-height:1;letter-spacing:-.02em}
+.stat .n sup{font-size:.45em;color:var(--civic)}
+.stat .l{color:var(--muted);font-size:.9rem;margin-top:.4rem;font-family:var(--font-sans)}
+
+/* ── Sections ─────────────────────────────── */
+section.block{border-bottom:1px solid var(--rule-strong);padding-block:clamp(3rem,6vw,5rem)}
+.sec-head{display:flex;align-items:baseline;gap:1.2rem;margin-bottom:.8rem}
+.sec-num{font-family:var(--font-mono);color:var(--civic);font-size:.85rem}
+.sec-label{color:var(--muted)}
+.sec-title{font-size:var(--step-3);font-weight:520;letter-spacing:-.01em;line-height:1.15;margin-bottom:1rem}
+.sec-sub{color:var(--muted);font-style:italic;margin-bottom:2.4rem;max-width:var(--measure)}
+
+/* profile */
+.profile-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem)}
+@media(max-width:860px){.profile-grid{grid-template-columns:1fr}}
+.profile-copy p{max-width:var(--measure);margin-bottom:1.2rem;color:var(--ink-soft)}
+.profile-copy p strong{color:var(--ink);font-weight:600}
+.edu h3{font-size:.72rem;margin-bottom:1.4rem;color:var(--ink)}
+.timeline{list-style:none;border-left:2px solid var(--rule-strong);padding-left:1.4rem;display:flex;flex-direction:column;gap:1.3rem}
+.timeline li{position:relative}
+.timeline li::before{
+  content:"";position:absolute;left:calc(-1.4rem - 5px);top:.45em;
+  width:8px;height:8px;border-radius:50%;background:var(--civic);
+}
+.timeline .yr{font-family:var(--font-mono);font-size:.78rem;color:var(--civic)}
+.timeline .deg{font-weight:600;line-height:1.35}
+.timeline .org{color:var(--muted);font-size:.92rem;font-style:italic}
+
+/* research cards */
+.r-card{
+  border-top:1px solid var(--rule-strong);
+  display:grid;grid-template-columns:6rem minmax(0,1fr);gap:1rem 2rem;
+  padding-block:1.9rem;
+}
+.r-card:last-of-type{border-bottom:1px solid var(--rule-strong)}
+@media(max-width:700px){.r-card{grid-template-columns:1fr;gap:.5rem}}
+.r-id{font-family:var(--font-mono);color:var(--civic);font-size:.85rem;padding-top:.35rem}
+.r-card h3{font-size:var(--step-1);font-weight:560;line-height:1.3;margin-bottom:.6rem}
+.r-card p{color:var(--ink-soft);max-width:var(--measure);margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem}
+.tag{
+  font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid var(--rule-strong);border-radius:2px;padding:.32rem .6rem;color:var(--ink-soft);
+  background:var(--paper-raised);
+}
+.link-row{display:flex;flex-wrap:wrap;gap:1.8rem;margin-top:2.2rem}
+.arrow-link{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--ink);border-bottom:1px solid var(--rule-strong);padding-bottom:.25rem}
+.arrow-link:hover{color:var(--civic);border-bottom-color:var(--civic)}
+.arrow-link::after{content:" →"}
+
+/* publications */
+.pub{
+  border-top:1px solid var(--rule);
+  display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.4rem 2rem;
+  padding-block:1.5rem;
+}
+.pub:last-of-type{border-bottom:1px solid var(--rule)}
+@media(max-width:640px){.pub{grid-template-columns:1fr;gap:.2rem}}
+.pub .yr{font-family:var(--font-mono);color:var(--civic);font-size:.85rem;padding-top:.25rem}
+.pub h3{font-size:var(--step-1);font-weight:540;line-height:1.32;margin-bottom:.35rem;max-width:var(--measure)}
+.pub h3 a{color:var(--ink);text-decoration:none}
+.pub h3 a:hover{color:var(--civic)}
+.pub .auth{color:var(--ink-soft);font-size:.95rem;margin-bottom:.15rem}
+.pub .venue{font-style:italic;color:var(--muted);font-size:.95rem}
+.pub .meta-row{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:.55rem;align-items:center}
+.pub .badge{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);border:1px solid var(--green-tint);background:var(--green-tint);border-radius:2px;padding:.25rem .5rem}
+.pub .badge.kr{color:var(--gold);background:#f3ecd9;border-color:#f3ecd9}
+.pub .badge.award{color:var(--civic);background:var(--civic-tint);border-color:var(--civic-tint)}
+.pub .doi{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.05em}
+
+/* progress list */
+.wip{list-style:none;max-width:var(--measure);display:flex;flex-direction:column}
+.wip li{border-top:1px solid var(--rule);padding-block:1rem;display:flex;gap:1.2rem;align-items:baseline}
+.wip li:last-child{border-bottom:1px solid var(--rule)}
+.wip .st{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.wip .t{color:var(--ink-soft)}
+
+/* teaching */
+.teach-group{margin-bottom:2.6rem}
+.teach-group:last-of-type{margin-bottom:0}
+.teach-group h3{font-size:.72rem;color:var(--muted);margin-bottom:.9rem}
+.course{
+  border-top:1px solid var(--rule);
+  display:flex;justify-content:space-between;gap:1.5rem;align-items:baseline;
+  padding-block:.85rem;max-width:var(--measure);
+}
+.course:last-child{border-bottom:1px solid var(--rule)}
+.course .c{font-weight:540}
+.course .c small{font-family:var(--font-mono);font-weight:400;font-size:.68rem;color:var(--muted);letter-spacing:.06em;margin-left:.5rem}
+.course .term{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;color:var(--civic);text-align:right;white-space:nowrap}
+@media(max-width:560px){.course{flex-direction:column;gap:.15rem}.course .term{text-align:left}}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+@media(max-width:860px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gallery{grid-template-columns:1fr}}
+.gallery figure{margin:0}
+.gallery img{
+  display:block;width:100%;aspect-ratio:4/3;object-fit:cover;
+  border-radius:var(--radius);border:1px solid var(--rule-strong);
+  box-shadow:var(--shadow-sm);background:var(--paper-deep);
+}
+.gallery figcaption{margin-top:.55rem;color:var(--muted);font-family:var(--font-mono);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;line-height:1.5}
+
+/* contact */
+.contact{background:var(--paper-ink);color:var(--paper)}
+.contact .sec-num,.contact .kicker{color:#d98a80}
+.contact .sec-label{color:#9aa0a8}
+.contact .sec-title{color:var(--paper-raised);max-width:26ch}
+.contact p{color:#c9cdd3;max-width:var(--measure);margin-bottom:2rem}
+.contact .btn{border-color:var(--paper-raised);color:var(--paper-raised)}
+.contact .btn:hover{background:var(--paper-raised);color:var(--paper-ink)}
+.contact .btn-primary{background:var(--civic);border-color:var(--civic);color:#fff}
+.contact .btn-primary:hover{background:var(--civic-deep);border-color:var(--civic-deep)}
+.contact-cols{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:start}
+@media(max-width:800px){.contact-cols{grid-template-columns:1fr}}
+.profile-links{list-style:none;display:flex;flex-direction:column}
+.profile-links li{border-top:1px solid rgba(252,250,245,.16);padding-block:.9rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.profile-links li:last-child{border-bottom:1px solid rgba(252,250,245,.16)}
+.profile-links .k{color:#9aa0a8}
+.profile-links a{color:var(--paper-raised);text-decoration:none;border-bottom:1px solid rgba(252,250,245,.3)}
+.profile-links a:hover{color:#e8b3ab;border-bottom-color:#e8b3ab}
+
+/* footer */
+footer{background:var(--paper-ink);border-top:1px solid rgba(252,250,245,.12)}
+.foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-block:1.6rem;color:#8b9097;font-size:.85rem;font-family:var(--font-sans)}
+footer a{color:#c9cdd3}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="container masthead-inner">
+    <a class="brand mono" href="#top">
+      <span class="file">File · Y. Ahn</span>
+    </a>
+    <nav class="mono">
+      <a href="#profile">Profile</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+      <p class="kicker mono">Governance &amp; Public Administration</p>
+      <h1>Yongjin Ahn<span class="kr">안용진 (安鏞珍)</span></h1>
+      <p class="degrees mono">BA<span>·</span>MA<span>·</span>PhD</p>
+      <p class="role-line">Assistant Professor of Public Administration</p>
+      <p class="inst-line">Department of Public Administration &amp; Graduate School of Governance · Sungkyunkwan University</p>
+      <p class="lede">
+        I study how bureaucracies behave — and what happens when politics gets in their way.
+        My research spans bureaucratic politics and behavioral public administration: government
+        shutdowns and the federal workforce, red tape and administrative burden, bureaucratic
+        motivation, and the governance of emerging technology.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#research">Explore the research →</a>
+        <a class="btn btn-ghost" href="#publications">Selected publications</a>
+        <a class="btn btn-ghost" href="cv/Yongjin_Ahn_CV.pdf">Download CV</a>
+      </div>
+      </div>
+      <figure class="hero-portrait">
+        <img src="images/portrait.jpg" alt="Portrait of Yongjin Ahn" width="805" height="991">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ META ═══ -->
+  <div class="meta-strip">
+    <div class="container meta-grid">
+      <div class="meta-cell"><span class="k mono">Role</span><span class="v">Assistant Professor (tenure-track)</span></div>
+      <div class="meta-cell"><span class="k mono">Department</span><span class="v">Public Administration &amp; Graduate School of Governance</span></div>
+      <div class="meta-cell"><span class="k mono">University</span><span class="v">Sungkyunkwan University, Seoul</span></div>
+      <div class="meta-cell"><span class="k mono">Email</span><span class="v"><a href="mailto:yjahn@skku.edu">yjahn@skku.edu</a></span></div>
+      <div class="meta-cell"><span class="k mono">Office</span><span class="v">Faculty Hall 40415 · +82 (0)2 760 0363</span></div>
+    </div>
+  </div>
+
+  <!-- ═══ 01 PROFILE ═══ -->
+  <section class="block" id="profile">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">01</span><span class="sec-label mono">Profile</span></div>
+      <h2 class="sec-title">What politics does to bureaucracy</h2>
+      <div class="profile-grid">
+        <div class="profile-copy">
+          <p>
+            I am a tenure-track assistant professor in the Department of Public Administration and
+            the Graduate School of Governance at <strong>Sungkyunkwan University</strong>. My work sits at the
+            intersection of bureaucratic politics and behavioral public administration, asking how
+            political turbulence, administrative frictions, and motivation shape the people who
+            carry out public policy.
+          </p>
+          <p>
+            I earned my PhD in Public Policy and Management from the <strong>University of Southern
+            California's Sol Price School of Public Policy</strong>, with a dissertation on mission match,
+            reputation, and bureaucratic motivation. Before joining SKKU, I was an assistant
+            professor at Korea University's Graduate School of Public Administration, where I taught
+            The Korean Bureaucracy, Behavioral Public Administration, AI Governance, and Research
+            Methods in Social Sciences — and received the Teaching Excellence Award in 2024.
+          </p>
+          <p>
+            At USC I was a research affiliate of the <a href="https://www.uscclear.com/home">Civic Leadership
+            Education and Research (CLEAR) Initiative</a>, leading collaborations funded by the Haynes
+            Foundation and the Volcker Alliance on the public-sector labor market of the Los Angeles
+            region. Most recently, my co-authored work on the 2018–2019 U.S. federal government
+            shutdown received the <strong>Herbert Kaufman Best Paper Award</strong> from APSA's Section on
+            Public Administration.
+          </p>
+        </div>
+        <div class="edu">
+          <h3 class="mono">Education &amp; Positions</h3>
+          <ul class="timeline">
+            <li><span class="yr">2013</span><div class="deg">BA, Sociology &amp; Business Administration</div><div class="org">Korea University</div></li>
+            <li><span class="yr">2013</span><div class="deg">Branch Manager, Marketing Division</div><div class="org">Meritz Fire &amp; Marine Insurance (2013–2015)</div></li>
+            <li><span class="yr">2018</span><div class="deg">MA, Public Administration</div><div class="org">Seoul National University</div></li>
+            <li><span class="yr">2022</span><div class="deg">PhD, Public Policy &amp; Management</div><div class="org">University of Southern California</div></li>
+            <li><span class="yr">2022</span><div class="deg">Research Affiliate, CLEAR Initiative</div><div class="org">USC Sol Price School of Public Policy</div></li>
+            <li><span class="yr">2023</span><div class="deg">Assistant Professor</div><div class="org">Korea University, Graduate School of Public Administration</div></li>
+            <li><span class="yr">2026</span><div class="deg">Assistant Professor</div><div class="org">Sungkyunkwan University, Graduate School of Governance</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 02 RESEARCH ═══ -->
+  <section class="block" id="research">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">02</span><span class="sec-label mono">Research Programme</span></div>
+      <p class="sec-sub">From government shutdowns and the federal workforce to red tape, AI, and the Korean bureaucracy.</p>
+
+      <article class="r-card">
+        <div class="r-id">R.01</div>
+        <div>
+          <h3>Government Shutdowns &amp; the Federal Workforce</h3>
+          <p>
+            How exogenous political shocks disrupt the administrative state. With Bill Resh, Don
+            Moynihan, Weijie Wang, and Eli Lee, I trace the effects of the 2018–2019 U.S. federal
+            shutdown on turnover, recruitment, and policy implementation — work published in
+            <em>Governance</em> and <em>Public Administration Review</em> and recognized with APSA's
+            Herbert Kaufman Best Paper Award.
+          </p>
+          <div class="tags"><span class="tag">Government shutdowns</span><span class="tag">Federal turnover</span><span class="tag">Populism</span><span class="tag">Policy implementation</span></div>
+        </div>
+      </article>
+
+      <article class="r-card">
+        <div class="r-id">R.02</div>
+        <div>
+          <h3>Administrative Frictions: Red Tape, Burden &amp; Sludge</h3>
+          <p>
+            Experimental and survey evidence on how citizens tolerate — or reject — administrative
+            frictions: red tape and rule legitimacy, burden tolerance across policy domains, and the
+            behavioral foundations of citizen-state interaction. I currently serve on the OECD
+            Behavioural Insights Team's Sludge Audit expert panel.
+          </p>
+          <div class="tags"><span class="tag">Red tape</span><span class="tag">Administrative burden</span><span class="tag">Sludge</span><span class="tag">Citizen-state interaction</span></div>
+        </div>
+      </article>
+
+      <article class="r-card">
+        <div class="r-id">R.03</div>
+        <div>
+          <h3>Technology &amp; Governance: AI</h3>
+          <p>
+            How governments adopt — and how public servants and citizens receive — emerging
+            technologies: public employees' attitudes toward AI adoption and satisfaction with
+            AI-driven public service delivery.
+          </p>
+          <div class="tags"><span class="tag">AI governance</span><span class="tag">Public-sector AI adoption</span><span class="tag">AI-driven service delivery</span></div>
+        </div>
+      </article>
+
+      <article class="r-card">
+        <div class="r-id">R.04</div>
+        <div>
+          <h3>The Korean Bureaucracy &amp; Intergovernmental Relations</h3>
+          <p>
+            A comparative and Korean agenda: the micro-foundations of central-local government
+            collaboration, involuntary backsourcing and organizational identity in public
+            bureaucracies, and the politicization of the administrative state — including the
+            bureaucracy of the second Trump administration seen through Korean eyes.
+          </p>
+          <div class="tags"><span class="tag">Intergovernmental relations</span><span class="tag">Backsourcing</span><span class="tag">Politicization</span><span class="tag">Korean bureaucracy</span></div>
+        </div>
+      </article>
+
+      <div class="link-row">
+        <a class="arrow-link" href="#publications">Full publication record</a>
+        <a class="arrow-link" href="#wip">Works in progress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 PUBLICATIONS ═══ -->
+  <section class="block" id="publications">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">03</span><span class="sec-label mono">Selected Publications</span></div>
+      <h2 class="sec-title">Recent work</h2>
+      <p class="sec-sub">Peer-reviewed journal articles; the full record — including book chapters — is in the CV.</p>
+
+      <article class="pub">
+        <div class="yr">2026</div>
+        <div>
+          <h3><a href="https://doi.org/10.1177/0734371X251399922">Two Families Under One Roof: The Role of Social Identity and Organizational Justice During Backsourcing</a></h3>
+          <p class="auth">Ahn, Y., &amp; Choi, H.</p>
+          <p class="venue">Review of Public Personnel Administration</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1177/0734371X251399922">doi:10.1177/0734371X251399922</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.1111/puar.70032">Assessing the Employee Turnover Effects of the 2018–2019 United States Federal Government Shutdown</a></h3>
+          <p class="auth">Resh, W., Ahn, Y., Wang, W., &amp; Lee, E.</p>
+          <p class="venue">Public Administration Review, 85(6), 1682–1696</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="badge award">Herbert Kaufman Award lineage</span><span class="doi"><a href="https://doi.org/10.1111/puar.70032">doi:10.1111/puar.70032</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.21888/KPAQ.2025.9.37.3.473">Public Servants' Perceptions and Attitudes Toward the Adoption of Artificial Intelligence (AI) Technologies</a></h3>
+          <p class="auth">Choi, H., &amp; Ahn, Y.</p>
+          <p class="venue">The Korean Public Administration Quarterly, 37(3), 473–503</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="badge kr">In Korean</span><span class="doi"><a href="https://doi.org/10.21888/KPAQ.2025.9.37.3.473">doi:10.21888/KPAQ.2025.9.37.3.473</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.20484/klog.29.2.12">The Micro-Foundations of Intergovernmental Collaboration: The Role of Power Devolution and Perceived Capacity</a></h3>
+          <p class="auth">Ahn, Y.</p>
+          <p class="venue">The Korean Local Government Studies, 29(2), 271–292</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="badge kr">In Korean</span><span class="doi"><a href="https://doi.org/10.20484/klog.29.2.12">doi:10.20484/klog.29.2.12</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2025</div>
+        <div>
+          <h3><a href="https://doi.org/10.18333/KPAR.59.1.39">Loyalty or Purge: The Bureaucracy of the Second Trump Administration, the Unitary Executive Theory, and Policy Implementation</a></h3>
+          <p class="auth">Ahn, Y.</p>
+          <p class="venue">The Korean Public Administration Review, 59(1), 39–66</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="badge kr">In Korean</span><span class="doi"><a href="https://doi.org/10.18333/KPAR.59.1.39">doi:10.18333/KPAR.59.1.39</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <h3><a href="https://doi.org/10.1177/00953997241279294">Community Diversity and Social Media Use in Local Governments</a></h3>
+          <p class="auth">Ahn, Y., &amp; Jong, J.</p>
+          <p class="venue">Administration &amp; Society, 56(9–10), 1083–1103</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1177/00953997241279294">doi:10.1177/00953997241279294</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2024</div>
+        <div>
+          <h3><a href="https://doi.org/10.1111/gove.12823">Populism and Administrative Dysfunction: The Impact of U.S. Government Shutdowns on Personnel and Policy Implementation</a></h3>
+          <p class="auth">Resh, W., Ahn, Y., &amp; Moynihan, D.</p>
+          <p class="venue">Governance, 37(S1), 61–82</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1111/gove.12823">doi:10.1111/gove.12823</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2023</div>
+        <div>
+          <h3><a href="https://doi.org/10.1080/23276665.2023.2228435">What Factors Underlie Burden Tolerance in South Korea? Policy Implementation Domain, Administrative Efficiency, and Bureaucratic Personality</a></h3>
+          <p class="auth">Campbell, J. W., &amp; Ahn, Y.</p>
+          <p class="venue">Asia Pacific Journal of Public Administration, 45(4), 362–384</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1080/23276665.2023.2228435">doi:10.1080/23276665.2023.2228435</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2023</div>
+        <div>
+          <h3><a href="https://doi.org/10.1080/15309576.2022.2137211">Motivations Behind Vaccine Hesitancy: Examining Altruism and Government Distrust Across Job Sectors During COVID-19</a></h3>
+          <p class="auth">Park, J., &amp; Ahn, Y.</p>
+          <p class="venue">Public Performance &amp; Management Review, 46(1), 165–192</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1080/15309576.2022.2137211">doi:10.1080/15309576.2022.2137211</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2023</div>
+        <div>
+          <h3><a href="https://doi.org/10.1080/15309576.2022.2124296">Who Loves Lockdowns? Public Service Motivation, Bureaucratic Personality, and Support for COVID-19 Containment Policy</a></h3>
+          <p class="auth">Ahn, Y., &amp; Campbell, J. W.</p>
+          <p class="venue">Public Performance &amp; Management Review, 46(1), 86–112</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1080/15309576.2022.2124296">doi:10.1080/15309576.2022.2124296</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2022</div>
+        <div>
+          <h3><a href="https://doi.org/10.1177/00910260221096857">Mission Match and Organizational Satisfaction: Testing the Mediating Role of Perceived Reputation</a></h3>
+          <p class="auth">Ahn, Y.</p>
+          <p class="venue">Public Personnel Management, 51(3), 355–379</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1177/00910260221096857">doi:10.1177/00910260221096857</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2022</div>
+        <div>
+          <h3><a href="https://doi.org/10.1177/00953997211069046">Red Tape, Rule Legitimacy, and Public Service Motivation: Experimental Evidence From Korean Citizens</a></h3>
+          <p class="auth">Ahn, Y., &amp; Campbell, J. W.</p>
+          <p class="venue">Administration &amp; Society, 54(9), 1651–1688</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1177/00953997211069046">doi:10.1177/00953997211069046</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2022</div>
+        <div>
+          <h3><a href="https://doi.org/10.1177/02750740211049280">Government Employees' Experience and Expectation of COVID-19 Hardships: The Moderating Role of Gender and Race in the United States</a></h3>
+          <p class="auth">Park, J., &amp; Ahn, Y.</p>
+          <p class="venue">The American Review of Public Administration, 52(1), 15–35</p>
+          <div class="meta-row"><span class="badge">Journal article</span><span class="doi"><a href="https://doi.org/10.1177/02750740211049280">doi:10.1177/02750740211049280</a></span></div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <div class="yr">2022</div>
+        <div>
+          <h3><a href="https://doi.org/10.4337/9781789906806.00007">The Political Economy of Bureaucratic Motivation</a></h3>
+          <p class="auth">Ahn, Y., &amp; Resh, W.</p>
+          <p class="venue">In Research Handbook on Motivation in Public Administration (pp. 10–27), Edward Elgar</p>
+          <div class="meta-row"><span class="badge">Book chapter</span><span class="doi"><a href="https://doi.org/10.4337/9781789906806.00007">doi:10.4337/9781789906806.00007</a></span></div>
+        </div>
+      </article>
+
+      <div class="link-row">
+        <a class="arrow-link" href="cv/Yongjin_Ahn_CV.pdf">All publications (CV)</a>
+        <a class="arrow-link" href="https://scholar.google.com/citations?user=VpibpyIAAAAJ">Google Scholar</a>
+      </div>
+
+      <!-- works in progress -->
+      <div id="wip" style="margin-top:3.5rem">
+        <h3 class="mono" style="margin-bottom:1.2rem;color:var(--muted)">Works in Active Progress</h3>
+        <ul class="wip">
+          <li><span class="st">Under review</span><span class="t">Not in My Backyard, But in My City: Experimental Evidence on What Motivates Citizens to Co-design</span></li>
+          <li><span class="st">Under review</span><span class="t">Public Values Alignment and Democracy: The (Mis)alignment of Public Values between Bureaucrats and Citizens</span></li>
+          <li><span class="st">Under review</span><span class="t">Representative Bureaucracy and Public Values: Bureaucratic Representation as the Identification and Articulation of Public Values</span></li>
+          <li><span class="st">Under review</span><span class="t">Intensity Matters: How Telework Affects Mental Health of Government Employees with Long COVID</span></li>
+          <li><span class="st">In progress</span><span class="t">Recruitment Effects of Government Shutdowns on the US Federal Labor Market</span></li>
+          <li><span class="st">In progress</span><span class="t">Governing by Stopgap: Continuing Resolutions and the Federal Personnel Pipeline</span></li>
+          <li><span class="st">In progress</span><span class="t">Determinants of Satisfaction in AI-Driven Public Service Delivery</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 04 TEACHING ═══ -->
+  <section class="block" id="teaching">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">04</span><span class="sec-label mono">Teaching</span></div>
+      <h2 class="sec-title">In the classroom</h2>
+      <p class="sec-sub">Courses taught at Sungkyunkwan University, Korea University, and USC.</p>
+
+      <div class="teach-group">
+        <h3 class="mono">Sungkyunkwan University</h3>
+        <div class="course"><span class="c">Research Methods<small>GSP5048</small></span><span class="term">Fall 2026</span></div>
+        <div class="course"><span class="c">Understanding Bureaucracy<small>PAD2010</small></span><span class="term">Fall 2026</span></div>
+        <div class="course"><span class="c">Behavioral Public Administration<small>PAD3033</small></span><span class="term">Spring 2026</span></div>
+      </div>
+
+      <div class="teach-group">
+        <h3 class="mono">Korea University</h3>
+        <div class="course"><span class="c">The Korean Bureaucracy<small>KU GSPA</small></span><span class="term">Spring 2025</span></div>
+        <div class="course"><span class="c">AI Governance<small>DPAD-221</small></span><span class="term">Spring 2025</span></div>
+        <div class="course"><span class="c">Behavioral Public Administration<small>DPAD-222</small></span><span class="term">Fall 2024 · 2025</span></div>
+        <div class="course"><span class="c">Theoretical Foundations of Public Administration<small>KU GSPA</small></span><span class="term">Spring 2024</span></div>
+        <div class="course"><span class="c">Research Methods in Social Sciences<small>DPAD-318</small></span><span class="term">Fall 2023 · 2024 · 2025</span></div>
+        <div class="course"><span class="c">Introduction to Public Administration<small>DPAD-205</small></span><span class="term">Fall 2023 · Spring 2024</span></div>
+        <div class="course"><span class="c">Public Management Seminar<small>DPAD-313</small></span><span class="term">Spring 2023</span></div>
+        <div class="course"><span class="c">Modern Society and Public Administration<small>GSSO-041</small></span><span class="term">Spring 2023 · 2025</span></div>
+      </div>
+
+      <div class="teach-group">
+        <h3 class="mono">University of Southern California</h3>
+        <div class="course"><span class="c">Public Policy and Management<small>PPD-225</small></span><span class="term">Fall 2019 · Spring 2020</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 TALKS ═══ -->
+  <section class="block" id="talks">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">05</span><span class="sec-label mono">Presentations &amp; Invited Talks</span></div>
+      <h2 class="sec-title">On the road</h2>
+      <p class="sec-sub">Selected conference papers and invited talks — with a few snapshots from the field.</p>
+
+      <div class="teach-group">
+        <div class="course"><span class="c">Who Uses Generative AI for What?<small>PMRC</small></span><span class="term">2026 · Washington, DC</span></div>
+        <div class="course"><span class="c">Korean Behavioral Public Administration<small>KF Guest Lecture · Universitas Padjadjaran</small></span><span class="term">2026 · Bandung</span></div>
+        <div class="course"><span class="c">Satisfaction in AI-Driven Public Service Delivery<small>KAGS</small></span><span class="term">2025 · Seoul</span></div>
+        <div class="course"><span class="c">Telework, Long COVID &amp; Mental Health<small>PMRC</small></span><span class="term">2025 · Seoul</span></div>
+        <div class="course"><span class="c">Public Values Alignment &amp; Democracy<small>PMRC</small></span><span class="term">2025 · Seoul</span></div>
+        <div class="course"><span class="c">Motivating Citizens to Co-design<small>IRSPM</small></span><span class="term">2025 · Bologna</span></div>
+        <div class="course"><span class="c">Trump's Schedule F Personnel Policy<small>KAPA</small></span><span class="term">2024 · Seoul</span></div>
+        <div class="course"><span class="c">Shutdowns &amp; the Public Sector Labor Market<small>APSA</small></span><span class="term">2024 · Philadelphia</span></div>
+        <div class="course"><span class="c">Involuntary Backsourcing in Public Bureaucracies<small>IRSPM</small></span><span class="term">2024 · Tampere</span></div>
+        <div class="course"><span class="c">Shutdown Effects on the Federal Labor Market<small>APSA</small></span><span class="term">2023 · Los Angeles</span></div>
+        <div class="course"><span class="c">Mission Over Reputation: An Online Experiment<small>PMRC</small></span><span class="term">2022 · Tempe, AZ</span></div>
+      </div>
+
+      <div class="link-row">
+        <a class="arrow-link" href="https://www.donga.com/news/Society/article/all/20241006/130160055/1">Press · Dong-A Daily on the Kaufman Award (Oct 2024)</a>
+      </div>
+
+      <div class="gallery">
+        <figure><img src="images/talks/pmrc2026.jpg" alt="Presenting at PMRC 2026 in Washington, DC" loading="lazy"><figcaption>PMRC 2026 · Washington, DC</figcaption></figure>
+        <figure><img src="images/talks/irspm2025-talk.jpg" alt="Presenting at IRSPM 2025 in Bologna" loading="lazy"><figcaption>IRSPM 2025 · Bologna</figcaption></figure>
+        <figure><img src="images/talks/irspm2025-group.jpg" alt="At the IRSPM 2025 welcome board in Bologna" loading="lazy"><figcaption>IRSPM 2025 · Bologna</figcaption></figure>
+        <figure><img src="images/talks/apsa2024.jpg" alt="Receiving the Herbert Kaufman Best Paper Award at APSA 2024" loading="lazy"><figcaption>APSA 2024 · Philadelphia — Herbert Kaufman Best Paper Award</figcaption></figure>
+        <figure><img src="images/talks/apsa2023.jpg" alt="Presenting at APSA 2023 in Los Angeles" loading="lazy"><figcaption>APSA 2023 · Los Angeles</figcaption></figure>
+        <figure><img src="images/talks/unpad3.jpg" alt="Guest lecture at Universitas Padjadjaran" loading="lazy"><figcaption>Guest Lecture · Universitas Padjadjaran · 2026</figcaption></figure>
+        <figure><img src="images/talks/unpad1.jpg" alt="With students at Universitas Padjadjaran" loading="lazy"><figcaption>With Students · Universitas Padjadjaran · 2026</figcaption></figure>
+        <figure><img src="images/talks/unpad2.jpg" alt="With faculty at Universitas Padjadjaran" loading="lazy"><figcaption>With FISIP Faculty · Universitas Padjadjaran · 2026</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 06 CONTACT ═══ -->
+  <section class="block contact" id="contact">
+    <div class="container">
+      <div class="sec-head"><span class="sec-num">06</span><span class="sec-label mono">Get in Touch</span></div>
+      <div class="contact-cols">
+        <div>
+          <h2 class="sec-title">I'm open to collaboration, supervision and speaking</h2>
+          <div class="cta-row" style="margin-top:1.5rem">
+            <a class="btn btn-primary" href="mailto:yjahn@skku.edu">Email me</a>
+            <a class="btn" href="cv/Yongjin_Ahn_CV.pdf">Download CV</a>
+          </div>
+        </div>
+        <ul class="profile-links">
+          <li><span class="k mono">Email</span><a href="mailto:yjahn@skku.edu">yjahn@skku.edu</a></li>
+          <li><span class="k mono">Telephone</span><span>+82 (0)2 760 0363</span></li>
+          <li><span class="k mono">Office</span><span>Faculty Hall 40415, Sungkyunkwan Univ.</span></li>
+          <li><span class="k mono">Google Scholar</span><a href="https://scholar.google.com/citations?user=VpibpyIAAAAJ">Profile →</a></li>
+          <li><span class="k mono">LinkedIn</span><a href="https://www.linkedin.com/in/yongjin-ahn-380378225/">yongjin-ahn →</a></li>
+          <li><span class="k mono">Faculty Page</span><a href="https://gsg.skku.edu/eng_gsg/professor/fulltime.do?mode=view&amp;perId=LZStrBoVwTgQgnAngrAUQO4GYA2aDUKASAWAMQBcAvAFQE0BFAXhqA%20&amp;">SKKU Profile →</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <span>© 2026 Yongjin Ahn · Sungkyunkwan University</span>
+    <span>Seoul, Republic of Korea</span>
+  </div>
+</footer>
+
+</body>
+</html>
