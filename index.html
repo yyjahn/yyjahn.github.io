@@ -92,11 +92,12 @@ img{max-width:100%}
   margin-bottom:.6rem;
 }
 .hero h1 .kr{font-weight:340;color:var(--muted);font-size:.42em;letter-spacing:.04em;vertical-align:.5em;margin-left:.4rem}
-.degrees{color:var(--muted);font-size:var(--step-0);margin-bottom:1.6rem}
-.degrees span{margin-inline:.25rem}
-.role-line{font-size:var(--step-2);font-weight:500;line-height:1.25;margin-bottom:.4rem}
-.inst-line{color:var(--ink-soft);font-style:italic;margin-bottom:1.8rem}
-.lede{max-width:var(--measure);font-size:var(--step-1);line-height:1.55;color:var(--ink-soft);margin-bottom:2.2rem}
+.degrees{color:var(--muted);font-size:var(--step-0);text-transform:none;margin-bottom:1.6rem}
+.affil{display:flex;align-items:center;gap:1.2rem;margin-bottom:2.2rem}
+.affil-logo{flex:none;width:5rem;height:auto}
+.affil-text{font-size:var(--step-1);line-height:1.4;color:var(--ink-soft);text-wrap:balance}
+.affil-text strong{color:var(--ink);font-weight:560}
+@media(max-width:560px){.affil-logo{width:3.75rem}.affil{gap:.9rem}}
 .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
 .btn{
   font-family:var(--font-mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
@@ -136,7 +137,7 @@ section.block{border-bottom:1px solid var(--rule-strong);padding-block:clamp(3re
 .sec-num{font-family:var(--font-mono);color:var(--civic);font-size:.85rem}
 .sec-label{color:var(--muted)}
 .sec-title{font-size:var(--step-3);font-weight:520;letter-spacing:-.01em;line-height:1.15;margin-bottom:1rem}
-.sec-sub{color:var(--muted);font-style:italic;margin-bottom:2.4rem;max-width:var(--measure)}
+#teaching .sec-title{margin-bottom:1.8rem}
 
 /* profile */
 .profile-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem)}
@@ -282,14 +283,11 @@ footer a{color:#c9cdd3}
       <div>
       <p class="kicker mono">Governance &amp; Public Administration</p>
       <h1>Yongjin Ahn<span class="kr">안용진 (安鏞珍)</span></h1>
-      <p class="degrees mono">BA<span>·</span>MA<span>·</span>PhD</p>
-      <p class="role-line">Assistant Professor of Public Administration</p>
-      <p class="inst-line">Department of Public Administration &amp; Graduate School of Governance · Sungkyunkwan University</p>
-      <p class="lede">
-        My research spans bureaucratic politics and behavioral public administration: government
-        shutdowns and the federal workforce, red tape and administrative burden, bureaucratic
-        motivation, and the governance of emerging technology.
-      </p>
+      <p class="degrees mono">Ph.D.</p>
+      <div class="affil">
+        <img class="affil-logo" src="images/skku-emblem.png" alt="Sungkyunkwan University emblem" width="80" height="80">
+        <p class="affil-text"><strong>Assistant Professor,</strong> Department of Public Administration &amp; Graduate School of Governance · Sungkyunkwan University</p>
+      </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="#research">Explore the research →</a>
         <a class="btn btn-ghost" href="#publications">Selected publications</a>
@@ -364,8 +362,6 @@ footer a{color:#c9cdd3}
   <section class="block" id="research">
     <div class="container">
       <div class="sec-head"><span class="sec-num">02</span><span class="sec-label mono">Research Programme</span></div>
-      <p class="sec-sub">From government shutdowns and the federal workforce to red tape, AI, and the Korean bureaucracy.</p>
-
       <article class="r-card">
         <div class="r-id">R.01</div>
         <div>
@@ -611,8 +607,6 @@ footer a{color:#c9cdd3}
     <div class="container">
       <div class="sec-head"><span class="sec-num">04</span><span class="sec-label mono">Teaching</span></div>
       <h2 class="sec-title">In the classroom</h2>
-      <p class="sec-sub">Courses taught at Sungkyunkwan University, Korea University, and USC.</p>
-
       <div class="teach-group">
         <h3 class="mono">Sungkyunkwan University</h3>
         <div class="course"><span class="c">Research Methods<small>GSP5048</small></span><span class="term">Fall 2026</span></div>
